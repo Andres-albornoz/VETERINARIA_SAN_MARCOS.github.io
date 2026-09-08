@@ -244,6 +244,7 @@
 }
 
 .box-text {
+  background-color: rgba(255, 255, 255, 0.603);             /* Color del texto */
   width: 400px;           /* Ajusta el ancho según qué tan alto/ancho quieras el bloque */
   max-width: 100%;
   text-align: justify;    /* Alinea ambos bordes para formar el bloque */
@@ -251,6 +252,7 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 /*
 .imagenes_cuadradas {
