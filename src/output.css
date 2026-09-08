@@ -226,6 +226,8 @@
 }
 
 .box-text {
+  border-radius: 8px;        /* Bordes redondeados */
+  background-color: #bdbdbdb7;
   width: 400px;           /* Ajusta el ancho según qué tan alto/ancho quieras el bloque */
   max-width: 100%;
   text-align: justify;    /* Alinea ambos bordes para formar el bloque */
@@ -242,17 +244,6 @@
     align-items: center;
     border-bottom: 1px solid #ccc;
 }
-
-.box-text_blogs {
-  background-color: rgba(255, 255, 255, 0.603);             /* Color del texto */
-  width: 400px;           /* Ajusta el ancho según qué tan alto/ancho quieras el bloque */
-  max-width: 100%;
-  text-align: justify;    /* Alinea ambos bordes para formar el bloque */
-  hyphens: auto;          /* Separa palabras con guion si es necesario para evitar espacios raros */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
 
 /*
 .imagenes_cuadradas {
