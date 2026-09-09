@@ -2,7 +2,7 @@
 <html data-theme="auto" lang="es">
     <head>
         <meta charset="utf-8">
-        <title>VETERINARIA SAN MARCOS - contacto</title>
+        <title>VETERINARIA SAN MARCOS - registro</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="src\output.css" >
     </head>
@@ -24,26 +24,23 @@
                 </nav>
             </header>
             
-            
             <main>
-                
-                <h2> VETERINARIA SAN MARCOS</h2>
-            
                 <form action="#" method="POST">
-                    <h3>formulario contacto:</h3>
-                    <label for="nombre">nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo">
-                    <label for="correo">correo:</label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
-                    <label for="contenido">contenido:</label>
-                    <textarea id="contenido" name="contenido" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
-                    <button type="submit">enviar</button>
+                    <label for="nombre-dueno">nombre completo:</label>
+                    <input type="text" id="nombre-dueno" name="nombre_dueno" placeholder="Escribe tu nombre"> <br>
+                    <label for="nombre-mascota">nombre mascota:</label>
+                    <input type="text" id="nombre-mascota" name="nombre_mascota" placeholder="Nombre de tu mascota"><br>
+                    <label for="dolencia">dolencia/problema:</label>
+                    <textarea id="dolencia" name="dolencia" rows="3" placeholder="Describe el problema"></textarea><br>
+                    <label for="horas">horas disponibles:</label>
+                    <input type="time" id="horas" name="horas"><br>
+                    <button type="submit">agendar</button>
                 </form>
-            </main>
-        
+                </main>
+            
             <footer>
                 <p>© 2024 VETERINARIA SAN MARCOS. Todos los derechos reservados.</p>
             </footer>
-        </div>
-    </body>
+        </body>
+    </div>
 </html>

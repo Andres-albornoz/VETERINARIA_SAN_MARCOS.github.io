@@ -245,10 +245,10 @@
     border-bottom: 1px solid #ccc;
 }
 
-/*
 .imagenes_cuadradas {
+    max-width: 100%;
     width: 200px;
-    height: 200px;
+    height: auto;
     object-fit: cover;
 }
-*/
+
