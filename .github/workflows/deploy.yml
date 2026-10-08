@@ -1,62 +1,64 @@
 name: CI y despliegue a GitHub Pages
 
 on:
-push:
-branches: [main]
-pull_request:
-workflow_dispatch:
+  push:
+    branches:
+      - main
+      - bockup_main_2
+  pull_request:
+  workflow_dispatch:
 
 permissions:
-contents: read
-pages: write
-id-token: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-group: pages
-cancel-in-progress: true
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-test-y-build:
-runs-on: ubuntu-latest
+  test-y-build:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Descargar código
-    uses: actions/checkout@v7
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
 
-  - name: Configurar Node.js
-    uses: actions/setup-node@v7
-    with:
-      node-version: 24
-      cache: npm
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
 
-  - name: Instalar dependencias
-    run: npm ci
+      - name: Instalar dependencias
+        run: npm ci
 
-  - name: Analizar código (ESLint)
-    run: npm run lint
+      - name: Analizar código
+        run: npm run lint
 
-  - name: Ejecutar pruebas (Vitest)
-    run: npm run test:run
+      - name: Ejecutar pruebas
+        run: npm run test:run
 
-  - name: Compilar para producción
-    run: npm run build
+      - name: Compilar proyecto
+        run: npm run build
 
-  - name: Subir carpeta dist como artefacto de Pages
+      - name: Subir carpeta dist
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
     if: github.ref == 'refs/heads/main'
-    uses: actions/upload-pages-artifact@v5
-    with:
-      path: dist
+    needs: test-y-build
+    runs-on: ubuntu-latest
 
-deploy:
-if: github.ref == 'refs/heads/main'
-needs: test-y-build
-runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-environment:
-  name: github-pages
-  url: ${{ steps.deployment.outputs.page_url }}
-
-steps:
-  - name: Publicar en GitHub Pages
-    id: deployment
-    uses: actions/deploy-pages@v5
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
