@@ -7,8 +7,8 @@ export default defineConfig({
   base: './',
 
   plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] })
+    react(),  
+    !process.env.VITEST && babel({ presets: [reactCompilerPreset()] }),
   ],
 
   test: {
