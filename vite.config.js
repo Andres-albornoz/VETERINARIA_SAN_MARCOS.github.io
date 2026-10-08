@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/VETERINARIA_SAN_MARCOS.github.io/',
+  base: './VETERINARIA_SAN_MARCOS.github.io/',
 
   plugins: [
     react(),
