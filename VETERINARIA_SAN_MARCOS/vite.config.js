@@ -8,4 +8,13 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+
+  // ...plugins
+  test: {
+    environment: 'jsdom',            // usar el DOM simulado
+    globals: true,                   // describe/it/expect disponibles sin importar
+    setupFiles: './src/test/setup.js',
+    include: ['src/**/*.test.{js,jsx}'],
+  },
+
 })

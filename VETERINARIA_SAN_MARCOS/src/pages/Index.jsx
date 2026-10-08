@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 const servicios = [
   { nombre: 'Consultas', imagen: '/imagen/consulta.jpg', id: 'consulta' },
