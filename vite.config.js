@@ -4,17 +4,17 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/VETERINARIA_SAN_MARCOS.github.io/',
+
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
 
-  // ...plugins
   test: {
-    environment: 'jsdom',            // usar el DOM simulado
-    globals: true,                   // describe/it/expect disponibles sin importar
+    environment: 'jsdom',
+    globals: true,
     setupFiles: './src/test/setup.js',
     include: ['src/**/*.test.{js,jsx}'],
   },
-
 })
