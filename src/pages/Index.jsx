@@ -1,5 +1,12 @@
 import { Link } from 'react-router';
+import fondo from '../assets/fondo.jpg';/*
+import carrito from '../assets/carrito.png';
+import carrito from '../assets/carrito.png';
+import carrito from '../assets/carrito.png';
+import carrito from '../assets/carrito.png';
+import carrito from '../assets/carrito.png';
 
+/*
 const servicios = [
   { nombre: 'Consultas', imagen: '/imagen/consulta.jpg', id: 'consulta' },
   { nombre: 'Vacunación', imagen: '/imagen/vacuna.jpg', id: 'vacunacion' },
@@ -8,13 +15,13 @@ const servicios = [
   { nombre: 'Exámenes', imagen: '/imagen/examenes.jpg', id: 'examenes' },
   { nombre: 'Otros', imagen: '/imagen/Otros.jpg', id: 'otros' },
 ];
-
+*/
 function Index() {
   return (
     <>
       <section className="banner-container">
         <Link to="/nosotros">
-          <img src="/imagen/fondo.jpg" alt="fondo" />
+          <img src={fondo} alt="fondo" />
         </Link>
       </section>
 
@@ -24,16 +31,7 @@ function Index() {
 
       <div className="encabezado">servicios</div>
 
-      <div className="servicios-grid">
-        {servicios.map((servicio) => (
-          <Link key={servicio.id} to={`/servicios/${servicio.id}`} className="servicio-card">
-            <div className="imagenes_cuadradas">
-              <img src={servicio.imagen} alt={servicio.nombre} />
-            </div>
-            <span>{servicio.nombre}</span>
-          </Link>
-        ))}
-      </div>
+      
     </>
   );
 }
