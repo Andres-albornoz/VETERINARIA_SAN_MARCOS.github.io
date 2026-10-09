@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router';
+import placeholder from '../assets/placeholder.png';
 
 const nombres = {
   consulta: 'consulta',
@@ -21,7 +22,7 @@ function ServicioDetalle() {
         <tbody>
           <tr>
             <td>
-              <img src="/imagen/placeholder.png" alt="placeholder" />
+              <img src={placeholder} alt="placeholder" />
             </td>
             <td>
               <strong>servicio de {nombre}</strong>

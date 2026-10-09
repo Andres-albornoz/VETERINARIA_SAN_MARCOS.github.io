@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import placeholder from '../assets/placeholder.png';
 
 const servicios = [
   'consulta',
@@ -18,7 +19,7 @@ function Servicios() {
         {servicios.map((id) => (
           <Link key={id} to={`/servicios/${id}`} className="servicio-card">
             <div className="imagenes_cuadradas">
-              <img src="/imagen/placeholder.png" alt="placeholder" />
+              <img src={placeholder} alt="placeholder" />
             </div>
             <span>{id}</span>
           </Link>

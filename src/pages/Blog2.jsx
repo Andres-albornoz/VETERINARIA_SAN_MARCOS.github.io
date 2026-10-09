@@ -1,3 +1,4 @@
+import placeholder from '../assets/placeholder.png';
 function Blog2() {
   return (
     <>
@@ -13,7 +14,7 @@ function Blog2() {
         fundación de Veterinaria San Marcos.
       </div>
 
-      <img className="nosotros-img" src="/imagen/placeholder.png" alt="placeholder" />
+      <img className="nosotros-img" src={placeholder} alt="placeholder" />
     </>
   );
 }

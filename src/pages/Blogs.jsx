@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import placeholder from '../assets/placeholder.png';
 
 function Blogs() {
   return (
@@ -27,7 +28,8 @@ function Blogs() {
             Los 5 cambios sutiles en su rutina para detectar a tiempo si tu mascota necesita atención
             profesional en Veterinaria San Marcos.
           </p>
-          <img src="public/imagen/placeholder.png" alt="placeholder" />
+          
+          <img className="nosotros-img" src={placeholder} alt="placeholder" />
         </div>
       </Link>
 
@@ -42,7 +44,7 @@ function Blogs() {
             Un rescate de emergencia que dio origen a lo que hoy es nuestra clínica veterinaria y
             nuestro compromiso con tu comunidad.
           </p>
-          <img src="public/imagen/placeholder.png" alt="placeholder" />
+          <img className="nosotros-img" src={placeholder} alt="placeholder" />
         </div>
       </Link>
     </>

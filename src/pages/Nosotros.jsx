@@ -1,3 +1,4 @@
+import perro from '../assets/perro.jpg';
 function Nosotros() {
   return (
     <>
@@ -15,8 +16,8 @@ function Nosotros() {
         animales y vecinos comprometidos con devolverles un poco de todo el amor incondicional que
         ellos nos regalan a diario.
       </div>
-
-      <img className="nosotros-img" src="/imagen/perro.jpg" alt="perro" />
+  
+      <img className="nosotros-img" src={perro} alt="perro" />
     </>
   );
 }

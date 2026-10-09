@@ -1,3 +1,4 @@
+import placeholder from '../assets/placeholder.png';
 function Blog1() {
   return (
     <>
@@ -18,7 +19,7 @@ function Blog1() {
         molestia o enfermedad lleve días o semanas desarrollándose en silencio.
       </div>
 
-      <img className="nosotros-img" src="/imagen/placeholder.png" alt="placeholder" />
+      <img className="nosotros-img" src={placeholder} alt="placeholder" />
     </>
   );
 }
