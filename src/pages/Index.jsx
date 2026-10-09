@@ -3,7 +3,7 @@ import fondo from '../assets/fondo.jpg';
 
 
 const servicios = [
-  { nombre: 'Consultas', imagen: './imagen/vacuna.jpg', id: 'consulta' },
+  { nombre: 'Consultas', imagen: './imagen/consulta.jpg', id: 'consulta' },
   { nombre: 'Vacunación', imagen: './imagen/vacuna.jpg', id: 'vacunacion' },
   { nombre: 'Cirugía', imagen: './imagen/cirugia.jpg', id: 'cirugia' },
   { nombre: 'Desparasitación', imagen: './imagen/desparasitacion.jpg', id: 'desparasitacion' },
