@@ -1,4 +1,5 @@
 import { NavLink, Link, Outlet } from 'react-router';
+import carrito from '../assets/carrito.png';
 
 function Layout() {
   return (
@@ -15,7 +16,7 @@ function Layout() {
           <NavLink to="/blogs">blogs</NavLink> |
           <NavLink to="/contacto">contacto</NavLink> |
           <Link to="/agendar" className="carrito">
-            <img src="/imagen/carrito.png" alt="agendar consulta" />
+            <img src={carrito} alt="agendar consulta" />
           </Link>
           |
         </nav>
