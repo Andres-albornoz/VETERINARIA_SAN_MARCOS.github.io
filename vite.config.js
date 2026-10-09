@@ -4,11 +4,11 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './VETERINARIA_SAN_MARCOS.github.io/',
+  base: './',
 
   plugins: [
     react(),  
-    !process.env.VITEST && babel({ presets: [reactCompilerPreset()] }),
+    babel({ presets: [reactCompilerPreset()] })
   ],
 
   test: {
