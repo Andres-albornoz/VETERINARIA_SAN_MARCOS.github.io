@@ -1,20 +1,14 @@
 import { Link } from 'react-router';
 import fondo from '../assets/fondo.jpg';
-import Consulta from '../assets/Consulta.jpg';/*
-import Vacunación from '../assets/Vacunación.jpg';
-import Cirugía from '../assets/Cirugía.jpg';
-import Desparasitación from '../assets/Desparasitación.jpg';
-import Exámenes from '../assets/Exámenes.jpg';
-import Otros from '../assets/Otros.jpg';*/
 
 
 const servicios = [
-  { nombre: 'Consultas', imagen: {Consulta}, id: 'consulta' },
+  { nombre: 'Consultas', imagen: './imagen/vacuna.jpg', id: 'consulta' },
   { nombre: 'Vacunación', imagen: './imagen/vacuna.jpg', id: 'vacunacion' },
-  { nombre: 'Cirugía', imagen: '/imagen/cirugia.jpg', id: 'cirugia' },
-  { nombre: 'Desparasitación', imagen: '/imagen/desparasitacion.jpg', id: 'desparasitacion' },
-  { nombre: 'Exámenes', imagen: '/imagen/examenes.jpg', id: 'examenes' },
-  { nombre: 'Otros', imagen: '/imagen/Otros.jpg', id: 'otros' },
+  { nombre: 'Cirugía', imagen: './imagen/cirugia.jpg', id: 'cirugia' },
+  { nombre: 'Desparasitación', imagen: './imagen/desparasitacion.jpg', id: 'desparasitacion' },
+  { nombre: 'Exámenes', imagen: './imagen/examenes.jpg', id: 'examenes' },
+  { nombre: 'Otros', imagen: './imagen/Otros.jpg', id: 'otros' },
 ];
 
 function Index() {
