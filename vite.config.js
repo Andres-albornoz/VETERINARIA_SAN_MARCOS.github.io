@@ -8,8 +8,8 @@ export default defineConfig({
 
   plugins: [
     react(),  
-    babel({ presets: [reactCompilerPreset()] }) //PARA GENEARL
-    //!process.env.VITEST && babel({ presets: [reactCompilerPreset()] }) //DESACTIVAR REAC DURANTE PRUEVAS
+    //babel({ presets: [reactCompilerPreset()] }) //PARA GENEARL
+    !process.env.VITEST && babel({ presets: [reactCompilerPreset()] }) //DESACTIVAR REAC DURANTE PRUEVAS
   ],
 
   test: {
