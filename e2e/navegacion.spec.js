@@ -15,7 +15,14 @@ test('Test: Ir hacia la seccion de servicios', async({page}) =>{
 
 test('Test: ir hacia la seccion de contacto', async({page}) =>{
 
-    await page.goto('/')
+    await page.goto('/');
     await page.getByRole('Link',{name: /contacto/i}).first().click();
     await expect(page).toHaveURL(/.*contacto/);
+});
+
+test('Test: Muestra error 404 por ruta inexistente', async({page}) =>{
+
+    await page.goto('/#/ruta-no-existente');
+    await expect(page.locator('body')).toContainText(/404|No existe/i);
+
 })
