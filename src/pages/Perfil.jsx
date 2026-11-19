@@ -1,22 +1,20 @@
-function Perfil() {
+import { useAuth } from '../core/authContext.js'
+
+export default function Perfil() {
+  const { usuario } = useAuth()
+
   return (
     <main className="perfil">
       <h2>Perfil de Usuario</h2>
 
       <section className="perfil-card">
-        <h3>Datos Personales</h3>
+        <h3>Datos de la cuenta</h3>
         <ul>
           <li>
-            <strong>Nombre completo:</strong> cliente de ejemplo
+            <strong>Correo electrónico:</strong> {usuario?.email}
           </li>
           <li>
-            <strong>Correo electrónico:</strong> cliente@example.com
-          </li>
-          <li>
-            <strong>Teléfono:</strong> +56 9 1234 5678
-          </li>
-          <li>
-            <strong>Dirección:</strong> Av. Ejemplo 123, Ejemplo
+            <strong>Rol:</strong> {usuario?.roles}
           </li>
         </ul>
       </section>
@@ -31,9 +29,8 @@ function Perfil() {
             <strong>Mascota 2:</strong> Michi (Gato - Mestizo)
           </li>
         </ul>
+        <p>Las mascotas son datos de ejemplo: el backend aún no expone una API para ellas.</p>
       </section>
     </main>
-  );
+  )
 }
-
-export default Perfil;

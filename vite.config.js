@@ -3,8 +3,19 @@ import babel from '@rolldown/plugin-babel'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
+// Desarrollo y preview: las peticiones /api se redirigen al backend local.
+const proxy = {
+  '/api': {
+    target: 'http://localhost:8080',
+    changeOrigin: true,
+  },
+}
+
 export default defineConfig({
   base: './',
+
+  server: { proxy },
+  preview: { proxy },
 
   plugins: [
     react(),  
