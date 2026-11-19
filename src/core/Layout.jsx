@@ -1,7 +1,10 @@
-import { NavLink, Link, Outlet } from 'react-router';
-import carrito from '../assets/carrito.png';
+import { NavLink, Link, Outlet } from 'react-router'
+import carrito from '../assets/carrito.png'
+import { useAuth } from './authContext.js'
 
 function Layout() {
+  const { autenticado, logout } = useAuth()
+
   return (
     <div className="site">
       <header>
@@ -15,6 +18,19 @@ function Layout() {
           <NavLink to="/nosotros">nosotros</NavLink> |
           <NavLink to="/blogs">blogs</NavLink> |
           <NavLink to="/contacto">contacto</NavLink> |
+          {autenticado ? (
+            <>
+              <NavLink to="/perfil">perfil</NavLink> |
+              <button type="button" className="nav-logout" onClick={logout}>
+                cerrar sesión
+              </button>{' '}
+              |
+            </>
+          ) : (
+            <>
+              <NavLink to="/login">ingresar</NavLink> |
+            </>
+          )}
           <Link to="/agendar" className="carrito">
             <img src={carrito} alt="agendar consulta" />
           </Link>
@@ -30,7 +46,7 @@ function Layout() {
         <p>© 2024 VETERINARIA SAN MARCOS. Todos los derechos reservados.</p>
       </footer>
     </div>
-  );
+  )
 }
 
-export default Layout;
+export default Layout
