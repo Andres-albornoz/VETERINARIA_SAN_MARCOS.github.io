@@ -228,6 +228,86 @@ button[type='submit']:hover {
   text-transform: capitalize;
 }
 
+/* Controles visibles solo para administradores */
+.acciones-admin {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.acciones-admin button,
+.admin-controles button {
+  padding: 8px 18px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.acciones-admin button:hover,
+.admin-controles button:hover {
+  color: #fff;
+  background: var(--accent);
+}
+
+.admin-controles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.admin-controles .btn-cancelar {
+  color: var(--text-soft);
+  border-color: var(--border);
+}
+
+.admin-controles .btn-cancelar:hover {
+  color: #fff;
+  background: var(--text-soft);
+}
+
+.admin-controles .btn-eliminar {
+  color: #b3261e;
+  border-color: #b3261e;
+}
+
+.admin-controles .btn-eliminar:hover {
+  color: #fff;
+  background: #b3261e;
+}
+
+.admin-controles button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mensaje-accion {
+  max-width: 520px;
+  margin: 0 auto 16px;
+  padding: 10px 14px;
+  text-align: center;
+  color: #b3261e;
+  background: var(--card-bg);
+  border: 1px solid #b3261e;
+  border-radius: 8px;
+}
+
+.site-form h2 {
+  margin: 0 0 8px;
+  text-align: center;
+  color: var(--heading);
+}
+
+.site-form .admin-controles button {
+  margin-top: 16px;
+}
+
 .box-text,
 .box-text_blogs {
   max-width: 850px;
